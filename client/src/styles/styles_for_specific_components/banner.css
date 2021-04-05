@@ -1,0 +1,13 @@
+#view-title-for-banner{
+  font-size: 30px;
+  text-align: center;
+}
+#banner{
+    min-height: 25rem;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}

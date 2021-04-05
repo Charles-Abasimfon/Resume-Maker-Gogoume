@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
+import {Switch,Route} from 'react-router-dom'
+import './styles/app.css';
 
 
-import './App.css';
-import UserForm from './components/UserForm';
+//Importing Context Providers
+import {LanguageProvider} from './utils/context_api/LanguageContext'
+import {UserProvider} from './utils/context_api/UserContext'
+
+//For page transitions
+import {AnimatePresence} from 'framer-motion'
+
+//Importing pages
+import Home from './pages/Home'
+import QuestionsPage from './pages/QuestionsPage'
+import GettingStartedPage from './pages/GettingStartedPage'
+import ContactPage from './pages/ContactPage'
 
 class App extends Component {
-
-  
-  
   render() {
     return (
-      <div>
-        <div className="col-lg-8 mx-auto text-center mt-5">
-          <h1><b>Let's generate your Resume!</b></h1>
-          <p className="lead">Please provide accurate and clear description wherever necessary.</p>
-          <hr />
-        </div>  
-        <UserForm/>
-      </div>  
+    <LanguageProvider>
+    <UserProvider>
+      <AnimatePresence>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/build" component={QuestionsPage}/>
+          <Route exact path="/getting-started" component={GettingStartedPage}/>
+          <Route exact path="/contact-us" component={ContactPage}/>
+        </Switch>
+      </AnimatePresence>
+    </UserProvider>
+    </LanguageProvider>
     );
   }
 }

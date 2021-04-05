@@ -1,0 +1,112 @@
+/* FOR HEADER AND NAVBARS - Header.js and Navbar components */
+.sticky-header{
+  position: fixed;
+  top: 0;
+  height: 8rem;
+  background-color: #0f325a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+.non-sticky-header{
+  height: 8rem;
+  background-color: #0f325a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+.header-inner{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger-btn{
+  font-size: 3.5rem;
+  width: 40px;
+  height: 35px;
+  right: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger-btn:hover{
+  color: #fff
+}
+.addTransiton{
+  transform: translateX(100vw);
+  transition: transform 0.5s ease-in-out;
+}
+.removeTransition{
+  transform: translateX(0vw);
+  transition: transform 0.5s ease-in-out;
+}
+#sidebar-list{
+  background-color: #0f325a;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2000;
+  right: 0;
+  top: 0;
+  margin-top: 8rem;
+  padding-top: 2.5rem;
+}
+.nav-big{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+.nav-big-link{
+ cursor: pointer;
+ color: #fff;
+ font-size: 1.6rem;
+ text-decoration: none !important;
+ border-bottom: 2px;
+ border-style: solid;
+ border-color: #0f325a;
+ transition: all 0.5s ease;
+ font-weight: 400;
+}
+.nav-big-link:hover{
+  color: #fff;
+  border-color: #ff9600;
+}
+.nav-small{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  margin-top: 1rem;
+  width: 80%;
+}
+.nav-small-link{
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 10px;
+  text-decoration: none !important;
+  transition: all 0.5s ease;
+  display: inline-flex;
+  margin: auto;
+  margin-top: 3.5rem;
+}
+.nav-small-link:hover{
+  color: #fff;
+}
+#logo{
+  height: 6.5rem;
+}
+
+.social-media-icon{
+  color: #ff9600 !important
+}
+.social-media-icon :hover{
+  color: #ff9600 !important
+}

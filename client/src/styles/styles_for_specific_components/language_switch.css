@@ -1,0 +1,25 @@
+/* FOR LANGUAGESWITCH - LanguageSwitch.js*/
+.MuiFormControl-root *{
+  font-size: 1.8rem !important;
+  color:#fff !important;
+  margin-right: 2.8rem;
+}
+.MuiList-root *{
+  font-size: 1.8rem !important;
+}
+.MuiSvgIcon-root{
+  width: 3rem  !important;
+  height: 3rem  !important;
+  top: 0 !important;
+  margin-top: -2px;
+  right: 0;
+  margin-right: -6px;
+}
+
+.MuiInput-underline{
+  border-bottom: 2px solid #fff !important;
+}
+
+*{
+  font-family: 'Poppins', sans-serif !important;
+}

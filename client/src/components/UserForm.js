@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../styles/app.css';
 /*import axios from 'axios';
 import { saveAs } from 'file-saver';*/
 import PersonalDetails from './PersonalDetails';

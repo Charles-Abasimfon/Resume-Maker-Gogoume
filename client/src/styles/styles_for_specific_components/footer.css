@@ -1,0 +1,23 @@
+/* FOR FOOTER -Footer.js */
+footer{
+  width: 100vw;
+  min-height: 20rem;
+  background-color:#0f325a;
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.footer-link{
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none !important;
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: #0f325a;
+  transition: all 0.5s ease;
+  font-weight: 400;
+}
+.footer-link:hover{
+  color:#fff;
+  border-color: #ff9600;
+}
