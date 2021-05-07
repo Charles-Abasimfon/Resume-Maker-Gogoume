@@ -57,7 +57,7 @@ function Footer() {
               </Link>
             </div>
             <div className="my-4 lg:mr-16 flex justify-center">
-              <Link to="/" className="footer-link transition duration-150 ease-in-out">
+              <Link to="/contact-us" className="footer-link transition duration-150 ease-in-out">
                 {globalTexts.contactus[selectedLanguage]}
               </Link>
             </div>

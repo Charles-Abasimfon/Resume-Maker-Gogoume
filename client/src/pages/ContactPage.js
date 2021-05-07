@@ -7,10 +7,8 @@ import Error from '../components/elements/Error'
 import Success from '../components/elements/Success'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
-import Banner from '../components/layout/Banner'
 import { FaSpinner } from 'react-icons/fa'
 import axios from 'axios'
-import {useHistory} from 'react-router-dom'
 import { contactTexts } from '../texts/contact_texts'
 
 
@@ -69,29 +67,24 @@ function Contact() {
 
 
   return (
-    <div className="view" style={{backgroundColor:"#F7F7FF"}}>
-    <Header  isSticky={true}/>
-
+    <div className="view">
+    <Header  isSticky={false}/>
     <motion.main initial="out" animate="in" exit="out" variants={pageTransitions} className="view-body">
-      <Banner viewtitle="contactus" backgroundImageUrl={`${window.location.origin}/assets/images/manhavingcoffeeandtexting.jpg`}/>
-      
 
-      <section style={{padding:".5rem", marginTop:"2rem"}} className="container mx-auto md:flex justify-center items-center">
+      <section className="mt-16 h-full lg:flex container justify-center">
 
-        <div className="md:w-1/2 flex justify-center items-center">
+        <div className="lg:w-1/2 flex justify-center items-center">
         <form onSubmit={handleSubmit(onSubmit)} className="p-6 lg:p-16">
-        <h1 className="font-medium text-3xl md:text-4xl mb-10">{globalTexts.sendusamessageandwewillbeintouchwithyoushortly[selectedLanguage]}</h1>
+        <h1 className="font-bold text-gray-800 text-4xl lg:text-5xl mb-10">{contactTexts.sendusamessageandwewillbeintouchwithyoushortly[selectedLanguage]}</h1>
           {/* Name */}
           <div className="mb-10">
             <label className="form-label" htmlFor="email">{globalTexts.name[selectedLanguage]}</label>
             <div className="inline-block relative w-full">
-              <input style={{width: "100%", maxWidth: "500px"}} className="block appearance-none border rounded w-full py-6 px-3 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500 transition-colors" 
+              <input style={{width: "100%", maxWidth: "500px"}} className="block appearance-none border-2 border-gray-200 rounded w-full py-6 px-3 leading-tight focus:outline-none focus:shadow-outline transition-colors" 
               id="name" type="text"
               required
               name="name"
-              ref={register({
-                required: true
-              })}/>
+              {...register('name', { required: true })}/>
               </div>
             </div>
             {/* Email */}
@@ -100,13 +93,12 @@ function Contact() {
               {globalTexts.email[selectedLanguage]}
             </label>
               <div className="inline-block relative w-full group">
-              <input style={{width: "100%", maxWidth: "500px"}} className="block appearance-none border rounded w-full py-6 px-3 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500 transition-colors" 
+              <input style={{width: "100%", maxWidth: "500px"}} className="block appearance-none border-2 border-gray-200 rounded w-full py-6 px-3 leading-tight focus:outline-none focus:shadow-outline transition-colors" 
               id="email" type="email"
               required
               name="email"
-              ref={register({
-              required: true
-              })}/>
+              {...register('email', { required: true })}
+              />
               </div>
             </div>
             {/* Enquiry */}
@@ -115,18 +107,16 @@ function Contact() {
               {contactTexts.enquiry[selectedLanguage]}
             </label>
               <div className="inline-block relative w-full group">
-              <textarea rows="5" style={{width: "100%", maxWidth: "500px"}} className="block appearance-none border rounded w-full py-6 px-3 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500 transition-colors" 
+              <textarea rows="5" style={{width: "100%", maxWidth: "500px"}} className="block appearance-none border-2 border-gray-200 rounded w-full py-6 px-3 leading-tight focus:outline-none focus:shadow-outline transition-colors" 
               id="enquiry"
               required
               name="enquiry"
-              ref={register({
-              required: true
-              })}/>
+              {...register('enquiry', { required: true })}/>
               </div>
             </div>
 
 
-            <div>
+            <div style={{width: "100%", maxWidth: "500px"}}>
               { //displays errors...
                 error && (
                 <Error errormsg={error} clearError={() => setError(undefined)}/>
@@ -134,7 +124,7 @@ function Contact() {
               }
             </div>
 
-            <div>
+            <div style={{width: "100%", maxWidth: "500px"}}>
               { //displays success...
                 success && (
                 <Success successmsg={success} clearSuccess={() => setSuccess(undefined)}/>
@@ -143,15 +133,15 @@ function Contact() {
             </div>
 
                   {/* Submit Button*/}
-            <button className="mb-10 flex items-center px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-800 transition duration-500 ease-in-out" type="submit">
+            <button className="mb-10 flex items-center button button-yellow" type="submit">
              {contactTexts.submit[selectedLanguage]}
              <span style={{display: loadingspinnerdisplay}} className="ml-2"><FaSpinner className="animate-spin"/></span>
             </button>
         </form>
         </div>
 
-        <div className="md:w-1/2 flex justify-center items-center p-10">
-         <img className="mx-auto md:m-0" style={{maxHeight:"40rem", width:"100%",objectFit: "cover"}} alt="" src={`${window.location.origin}/assets/images/woman-on-call.jpg`}/>
+        <div className="lg:w-1/2 h-full flex justify-center p-6 lg:p-16">
+         <img className="mx-auto md:m-0 lg:mt-24" style={{maxHeight:"40rem", width:"100%",objectFit: "cover"}} alt="" src={`${window.location.origin}/images/mail_us.svg`}/>
         </div>
         
 

@@ -21,4 +21,12 @@ export const globalTexts = {
     "EN" : "My Account",
     "JP" : "マイアカウント"
   },
+  name : {
+    "EN" : "Name",
+    "JP" : "名前"
+  },
+  email : {
+    "EN" : "Email",
+    "JP" : "メールアドレス"
+  },
 };

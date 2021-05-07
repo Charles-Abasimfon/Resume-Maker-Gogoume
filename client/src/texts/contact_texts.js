@@ -7,12 +7,12 @@ export const contactTexts = {
     "EN" : "Submit",
     "JP" : "提出"
   },
-  selecttoregisterfornewsletter : {
-    "EN" : "Select to register for newsletter",
-    "JP" : "ニュースレターにご登録"
-  },
   messagesentsuccessfully : {
     "EN" : "Message sent successfully.",
     "JP" : "メッセージ送信済み。"
-  }
+  },
+  sendusamessageandwewillbeintouchwithyoushortly : {
+    "EN" : "Send us a message and we will be in touch with you shortly.",
+    "JP" : "メッセージを頂ければ、後ほどこちらから連絡をいたします。"
+  },
 }

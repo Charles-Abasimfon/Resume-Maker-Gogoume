@@ -35,6 +35,19 @@ app.get('/fetch-pdf', (req,res) => {
     res.sendFile(`${__dirname}/Resume.pdf`);
 });
 
+
+
+/* START - API ROUTES */
+// (1) : IMPORTING ROUTES
+const mailRoutes = require('./backend/routes/MailRoutes')
+
+
+// (2) : USING ROUTES
+app.use("/api/mail" , mailRoutes)
+/* END - API ROUTES */
+
+
+
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production'){
     //set static folder

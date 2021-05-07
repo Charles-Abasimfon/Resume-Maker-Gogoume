@@ -40,8 +40,9 @@ function Home() {
       <Header isSticky={false}/>
       <motion.main initial="out" animate="in" exit="out" variants={pageTransitions} className="view-body">
         <section className="mt-16 h-full lg:flex container justify-center items-center">
-          <div className="lg:w-1/2 p-6">
-            <p className="font-bold text-gray-800 text-6xl mb-10">
+
+          <div className="lg:w-1/2 p-6 lg:p-16">
+            <p className="font-bold text-gray-800 text-4xl lg:text-6xl mb-10">
               {gettingStartedTexts.letsgetstarted[selectedLanguage]}
             </p>
           <div style={{maxWidth:"500px"}} className="mb-10">
@@ -76,8 +77,8 @@ function Home() {
           </button>
           </div>
 
-          <div className="lg:w-1/2 p-6">
-            <img src={`${window.location.origin}/images/resume_undraw.svg`}/>
+          <div className="lg:w-1/2 p-6 lg:p-16">
+            <img src={`${window.location.origin}/images/resume_undraw.svg`} alt=""/>
           </div>
         </section>
       </motion.main>

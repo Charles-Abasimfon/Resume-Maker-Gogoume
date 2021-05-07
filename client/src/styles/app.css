@@ -62,7 +62,6 @@ button :hover, :focus {
 
 .button{
   border-radius: 50px !important;
-  font-weight: 600;
   font-size: 1.8rem;
   transition: all 0.5s ease;
   font-family: 'Capriola', sans-serif !important;
@@ -78,6 +77,10 @@ button :hover, :focus {
 
 .button-yellow:hover{
   opacity: 1 !important;
+}
+
+.form-label{
+  font-weight: 500;
 }
 
 /*HOME PAGE*/
